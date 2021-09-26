@@ -39,21 +39,26 @@ public class Seleccion_colombia {
             
             switch(opcion){
                 case 1:
-                    jugadores[contador]=new Jugador();
-                    System.out.println("Digite el id del jugador");
-                    jugadores[contador].setID(entrada.nextInt());
-                    System.out.println("Digite el Nombre del jugador");
-                    jugadores[contador].setNombre(entrada.next());
-                    System.out.println("Digite el Apellido del jugador");
-                    jugadores[contador].setApalleido(entrada.next());
-                    System.out.println("Digite la edad del jugador");
-                    jugadores[contador].setEdad(entrada.next());
-                    System.out.println("Digite la posicion del jugador");
-                    jugadores[contador].setPosicion(entrada.next());
-                    System.out.println("Digite el numero del jugador");
-                    jugadores[contador].setNumero(entrada.next());
-                    System.out.println("Digite el nombre del equipo del jugador");
-                    jugadores[contador].setNombre_del_Equio(entrada.next());
+                    if(contador<=3)
+                    {
+                        jugadores[contador]=new Jugador();
+                        System.out.println("Digite el id del jugador");
+                        jugadores[contador].setID(entrada.nextInt());
+                        System.out.println("Digite el Nombre del jugador");
+                        jugadores[contador].setNombre(entrada.next());
+                        System.out.println("Digite el Apellido del jugador");
+                        jugadores[contador].setApalleido(entrada.next());
+                        System.out.println("Digite la edad del jugador");
+                        jugadores[contador].setEdad(entrada.next());
+                        System.out.println("Digite la posicion del jugador");
+                        jugadores[contador].setPosicion(entrada.next());
+                        System.out.println("Digite el numero del jugador");
+                        jugadores[contador].setNumero(entrada.next());
+                        System.out.println("Digite el nombre del equipo del jugador");
+                        jugadores[contador].setNombre_del_Equio(entrada.next());
+                    }else{
+                        System.out.println("Ya no se puede metrar mas jugadores");
+                    }
                     break;
                 case 2:
                     System.out.println("Digite la posicion del jugador");
