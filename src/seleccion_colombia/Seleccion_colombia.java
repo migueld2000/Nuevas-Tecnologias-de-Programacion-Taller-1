@@ -102,23 +102,31 @@ public class Seleccion_colombia {
                         {
                             System.out.println("Id actual del jugador");
                             System.out.println(jugadores[i].getID());
-                            
-                            
-                            
                             System.out.println("Nombre actual del jugador");
                             System.out.println(jugadores[i].getNombre());
-                            
                             System.out.println("Apellido actual del jugador");
                             System.out.println(jugadores[i].getApalleido());
-                            
                             System.out.println("Edad actual del jugador");
-                            System.out.println(jugadores[i].getEdad());
-                            
+                            System.out.println(jugadores[i].getEdad()); 
                             System.out.println("Nombre del equipo actual del jugador");
                             System.out.println(jugadores[i].getNombre_del_Equio());
-                            
                             System.out.println("Posicion actual del jugador");
                             System.out.println(jugadores[i].getPosicion());
+                            System.out.println("***************************************************************");
+                            System.out.println("Digite el nuevo id del jugador");
+                            jugadores[contador].setID(entrada.nextInt());
+                            System.out.println("Digite el nuevo Nombre del jugador");
+                            jugadores[contador].setNombre(entrada.next());
+                            System.out.println("Digite el nuevo Apellido del jugador");
+                            jugadores[contador].setApalleido(entrada.next());
+                            System.out.println("Digite la nueva edad del jugador");
+                            jugadores[contador].setEdad(entrada.next());
+                            System.out.println("Digite la nueva posicion del jugador");
+                            jugadores[contador].setPosicion(entrada.next());
+                            System.out.println("Digite el nuevo numero del jugador");
+                            jugadores[contador].setNumero(entrada.next());
+                            System.out.println("Digite el nuevo nombre del equipo del jugador");
+                            jugadores[contador].setNombre_del_Equio(entrada.next());
                             
                         }
                         
@@ -132,6 +140,17 @@ public class Seleccion_colombia {
                     break;
                     
                 case 4:
+                    
+                     for(int i=25;i<contador;i++)
+                    {
+                        System.out.println(jugadores[i].getID());
+                        System.out.println(jugadores[i].getNombre());
+                        System.out.println(jugadores[i].getApalleido());
+                        System.out.println(jugadores[i].getEdad());
+                        System.out.println(jugadores[i].getNombre_del_Equio());
+                        System.out.println(jugadores[i].getPosicion());
+                        System.out.println("***************************************************************");
+                    }                  
                     break;
                     
                 case 5:
