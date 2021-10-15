@@ -41,13 +41,13 @@ public class Seleccion_colombia {
                     
                     System.out.println("Digite id:");
                     jugadores[contador].setId(entrada.nextInt());
-                    System.out.println("Digite Numcamisa");
-                    jugadores[contador].setNumcamisa(entrada.nextInt());
                     System.out.println("Digite nombre:");
-                    jugadores[contador].setnombre(entrada.next());
+                    jugadores[contador].setNombre(entrada.next());
                     System.out.println("Digite Apellido:");
                     jugadores[contador].setApellido(entrada.next());
                     System.out.println("Digite Posicion:");
+                    System.out.println("Digite el numero de la camisa");
+                    jugadores[contador].setNumero(entrada.nextInt());
                     jugadores[contador].setPosicion(entrada.next());
                     System.out.println("Digite Edad:");
                     jugadores[contador].setEdad(entrada.nextInt());
@@ -62,7 +62,7 @@ public class Seleccion_colombia {
                     int camisetaabuscar=entrada.nextInt();
                     
                     for(int i=0; i<contador; i++){
-                        if(camisetaabuscar==jugadores[i].getNumcamisa()){
+                        if(camisetaabuscar==jugadores[i].getNumero()){
                             System.out.println("el jugador existe:");
                             
                             break;
@@ -81,20 +81,20 @@ public class Seleccion_colombia {
                     int editjugador =entrada.nextInt();
                     
                     for(int i=0; i<contador; i++){
-                        if(editjugador==jugadores[i].getNumcamisa()){
+                        if(editjugador==jugadores[i].getNumero()){
                             System.out.println("Digite id:");
                             jugadores[i].setId(entrada.nextInt());
-                            System.out.println("Digite Numcamisa");
-                            jugadores[i].setNumcamisa(entrada.nextInt());
                             System.out.println("dita el nuevo nombre");
-                            jugadores[i].setnombre(entrada.next());
-                            System.out.println("Digite Apellido:");
+                            jugadores[i].setNombre(entrada.next());
+                            System.out.println("Digite nuevo apellido:");
                             jugadores[i].setApellido(entrada.next());
-                            System.out.println("Digite Posicion:");
+                            System.out.println("Digite la nueva posicion:");
                             jugadores[i].setPosicion(entrada.next());
-                            System.out.println("Digite Edad:");
+                            System.out.println("Digite el nuevo numero de la camisa");
+                            jugadores[i].setNumero(entrada.nextInt());
+                            System.out.println("Digite la nueva edad:");
                             jugadores[i].setEdad(entrada.nextInt());
-                            System.out.println("Digite Equipo:");
+                            System.out.println("Digite el nuevo equipo:");
                             jugadores[i].setEquipo(entrada.next());
                             break;
                         }else{
@@ -107,10 +107,10 @@ public class Seleccion_colombia {
                 case 4:
                     for(int i=0; i<contador; i++){
                     System.out.println(jugadores[i].getId());    
-                    System.out.println(jugadores[i].getNumcamisa());
-                    System.out.println(jugadores[i].getnombre());
+                    System.out.println(jugadores[i].getNombre());
                     System.out.println(jugadores[i].getApellido());
                     System.out.println(jugadores[i].getPosicion());
+                    System.out.println(jugadores[i].getNumero());
                     System.out.println(jugadores[i].getEdad());
                     System.out.println(jugadores[i].getEquipo());
                         

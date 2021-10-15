@@ -12,25 +12,28 @@ package jugador;
 public class Jugador {
 
     private int id;
-    private int Numcamisa;
-    private String nombre;
-    private String apellido;
-    private String posicion;
-    private int edad;
-    private String equipo;
+    private int Numero;
+    private String Nombre;
+    private String Apellido;
+    private String Posicion;
+    private int Edad;
+    private String Equipo;
 
     public Jugador() {
     }
-    
-    public Jugador(int id, int Numcamisa, String nombre, String apellido, String posicion, int edad, String equipo) {
+
+    public Jugador(int id, int Numero, String Nombre, String Apellido, String Posicion, int Edad, String Equipo) {
         this.id = id;
-        this.Numcamisa = Numcamisa;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.posicion = posicion;
-        this.edad = edad;
-        this.equipo = equipo;
+        this.Numero = Numero;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
+        this.Posicion = Posicion;
+        this.Edad = Edad;
+        this.Equipo = Equipo;
     }
+
+    
+    
      //GET Y SET
 
     public int getId() {
@@ -41,62 +44,57 @@ public class Jugador {
         this.id = id;
     }
 
-    public int getNumcamisa() {
-        return Numcamisa;
+    public int getNumero() {
+        return Numero;
     }
 
-    public void setNumcamisa(int Numcamisa) {
-        this.Numcamisa = Numcamisa;
+    public void setNumero(int Numero) {
+        this.Numero = Numero;
     }
 
-    public String getnombre() {
-        return nombre;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setnombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
     }
 
     public String getPosicion() {
-        return posicion;
+        return Posicion;
     }
 
-    public void setPosicion(String posicion) {
-        this.posicion = posicion;
+    public void setPosicion(String Posicion) {
+        this.Posicion = Posicion;
     }
 
     public int getEdad() {
-        return edad;
+        return Edad;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setEdad(int Edad) {
+        this.Edad = Edad;
     }
 
     public String getEquipo() {
-        return equipo;
+        return Equipo;
     }
 
-    public void setEquipo(String equipo) {
-        this.equipo = equipo;
+    public void setEquipo(String Equipo) {
+        this.Equipo = Equipo;
     }
-    
-    
-    public int buscarNumcamisa(){
+
+    public int buscarNumero(){
  
-        return(0);    
-    
-}
+        return(0);
+    }
 
-    
-    
-    
 }  
