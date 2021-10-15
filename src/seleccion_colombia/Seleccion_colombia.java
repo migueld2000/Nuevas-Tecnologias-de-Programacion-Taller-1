@@ -18,150 +18,121 @@ public class Seleccion_colombia {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner entrada=new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         int opcion;
-        int contador = 0;
+        int contador=0;
         
-        Jugador [] jugadores=new Jugador[3];
-        
-        do
-        {
-            System.out.println("Bienbenido");
-            System.out.println("****************************");
-            System.out.println("1. Agregar un jagador");
-            System.out.println("2. Buscar un jugador por el numero");
-            System.out.println("3. Editar a un jugador");
-            System.out.println("4. Mostrar toda la convocatoria de jugadores");
-            System.out.println("5. Salir");
+        Jugador[] jugadores=new Jugador[23];
+        do{
+            System.out.println("Bienvenidos");
+            System.out.println("***********");
+            System.out.println("1.Agregar Jugador");
+            System.out.println("2.Buscar Jugador");
+            System.out.println("3.Editar Jugador");
+            System.out.println("4.Mostar Jugadores");
+            System.out.println("5.Salir");
             
-            System.out.println("Digite la opcion: ");
+            System.out.println("Digite una opcion");
             opcion=entrada.nextInt();
             
             switch(opcion){
                 case 1:
-                    if(contador<=3)
-                    {
-                        jugadores[contador]=new Jugador();
-                        System.out.println("Digite el id del jugador");
-                        jugadores[contador].setID(entrada.nextInt());
-                        System.out.println("Digite el Nombre del jugador");
-                        jugadores[contador].setNombre(entrada.next());
-                        System.out.println("Digite el Apellido del jugador");
-                        jugadores[contador].setApalleido(entrada.next());
-                        System.out.println("Digite la edad del jugador");
-                        jugadores[contador].setEdad(entrada.next());
-                        System.out.println("Digite la posicion del jugador");
-                        jugadores[contador].setPosicion(entrada.next());
-                        System.out.println("Digite el numero del jugador");
-                        jugadores[contador].setNumero(entrada.next());
-                        System.out.println("Digite el nombre del equipo del jugador");
-                        jugadores[contador].setNombre_del_Equio(entrada.next());
-                    }else{
-                        System.out.println("Ya no se puede metrar mas jugadores");
+                    jugadores[contador]=new Jugador();
+                    
+                    System.out.println("Digite id:");
+                    jugadores[contador].setId(entrada.nextInt());
+                    System.out.println("Digite Numcamisa");
+                    jugadores[contador].setNumcamisa(entrada.nextInt());
+                    System.out.println("Digite nombre:");
+                    jugadores[contador].setnombre(entrada.next());
+                    System.out.println("Digite Apellido:");
+                    jugadores[contador].setApellido(entrada.next());
+                    System.out.println("Digite Posicion:");
+                    jugadores[contador].setPosicion(entrada.next());
+                    System.out.println("Digite Edad:");
+                    jugadores[contador].setEdad(entrada.nextInt());
+                    System.out.println("Digite Equipo:");
+                    jugadores[contador].setEquipo(entrada.next());
+                    contador++;
+                    
+                    break;  
+                case 2:
+                    boolean jugador = true;
+                    System.out.println("Digite el camiseta jugador a buscar");
+                    int camisetaabuscar=entrada.nextInt();
+                    
+                    for(int i=0; i<contador; i++){
+                        if(camisetaabuscar==jugadores[i].getNumcamisa()){
+                            System.out.println("el jugador existe:");
+                            
+                            break;
+                        }else{
+                            System.out.println("el jugador no existe:");
+                            break;
+                        }
+                    }
+                   
+                    
+                    break;
+          
+                case 3: 
+                   boolean Jugador = true;
+                    System.out.println("Digite el  jugador a editar");
+                    int editjugador =entrada.nextInt();
+                    
+                    for(int i=0; i<contador; i++){
+                        if(editjugador==jugadores[i].getNumcamisa()){
+                            System.out.println("Digite id:");
+                            jugadores[i].setId(entrada.nextInt());
+                            System.out.println("Digite Numcamisa");
+                            jugadores[i].setNumcamisa(entrada.nextInt());
+                            System.out.println("dita el nuevo nombre");
+                            jugadores[i].setnombre(entrada.next());
+                            System.out.println("Digite Apellido:");
+                            jugadores[i].setApellido(entrada.next());
+                            System.out.println("Digite Posicion:");
+                            jugadores[i].setPosicion(entrada.next());
+                            System.out.println("Digite Edad:");
+                            jugadores[i].setEdad(entrada.nextInt());
+                            System.out.println("Digite Equipo:");
+                            jugadores[i].setEquipo(entrada.next());
+                            break;
+                        }else{
+                            System.out.println("el jugador no editado:");
+                            break;
+                        }
+                    }
+                    
+                    break;
+                case 4:
+                    for(int i=0; i<contador; i++){
+                    System.out.println(jugadores[i].getId());    
+                    System.out.println(jugadores[i].getNumcamisa());
+                    System.out.println(jugadores[i].getnombre());
+                    System.out.println(jugadores[i].getApellido());
+                    System.out.println(jugadores[i].getPosicion());
+                    System.out.println(jugadores[i].getEdad());
+                    System.out.println(jugadores[i].getEquipo());
+                        
+                        
                     }
                     break;
-                    
-                case 2:
-                    System.out.println("Digite el numero del jugador");
-                    jugadores[contador].setNumero(entrada.next());
-                
-                    
-                    String setNumero = null;
-                    for(int i=0;i<contador;i++)
-                    {
-                        
-                        if(setNumero==jugadores[i].getNumero())
-                        {
-                            System.out.println(jugadores[i].getID());
-                            System.out.println(jugadores[i].getNombre());
-                            System.out.println(jugadores[i].getApalleido());
-                            System.out.println(jugadores[i].getEdad());
-                            System.out.println(jugadores[i].getNombre_del_Equio());
-                            System.out.println(jugadores[i].getPosicion());
-                            
-                        }
-                        else
-                        {
-                            System.out.println("El jugaor buscado no se encuentra registrado");
-                        }
-                        
-                    }                  
-                    break;
-                    
-                case 3:
-                    
-                    System.out.println("Digite el id del jugador");
-                    jugadores[contador].setID(entrada.nextInt());
-                    
-                    int setID = 0;
-
-                    for(int i=0;i<contador;i++)
-                    {
-
-                        if(setID==jugadores[i].getID())
-                        {
-                            System.out.println("Id actual del jugador");
-                            System.out.println(jugadores[i].getID());
-                            System.out.println("Nombre actual del jugador");
-                            System.out.println(jugadores[i].getNombre());
-                            System.out.println("Apellido actual del jugador");
-                            System.out.println(jugadores[i].getApalleido());
-                            System.out.println("Edad actual del jugador");
-                            System.out.println(jugadores[i].getEdad()); 
-                            System.out.println("Nombre del equipo actual del jugador");
-                            System.out.println(jugadores[i].getNombre_del_Equio());
-                            System.out.println("Posicion actual del jugador");
-                            System.out.println(jugadores[i].getPosicion());
-                            System.out.println("***************************************************************");
-                            System.out.println("Digite el nuevo id del jugador");
-                            jugadores[contador].setID(entrada.nextInt());
-                            System.out.println("Digite el nuevo Nombre del jugador");
-                            jugadores[contador].setNombre(entrada.next());
-                            System.out.println("Digite el nuevo Apellido del jugador");
-                            jugadores[contador].setApalleido(entrada.next());
-                            System.out.println("Digite la nueva edad del jugador");
-                            jugadores[contador].setEdad(entrada.next());
-                            System.out.println("Digite la nueva posicion del jugador");
-                            jugadores[contador].setPosicion(entrada.next());
-                            System.out.println("Digite el nuevo numero del jugador");
-                            jugadores[contador].setNumero(entrada.next());
-                            System.out.println("Digite el nuevo nombre del equipo del jugador");
-                            jugadores[contador].setNombre_del_Equio(entrada.next());
-                            
-                        }
-                        
-                        else
-                        {
-                            System.out.println("El jugaor buscado no se encuentra registrado");
-                        }
-                        
-                    }            
-
-                    break;
-                    
-                case 4:
-                    
-                     for(int i=25;i<contador;i++)
-                    {
-                        System.out.println(jugadores[i].getID());
-                        System.out.println(jugadores[i].getNombre());
-                        System.out.println(jugadores[i].getApalleido());
-                        System.out.println(jugadores[i].getEdad());
-                        System.out.println(jugadores[i].getNombre_del_Equio());
-                        System.out.println(jugadores[i].getPosicion());
-                        System.out.println("***************************************************************");
-                    }                  
-                    break;
-                    
                 case 5:
                     System.exit(0);
                     break;
-                    
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println("opcion no valida");
                     break;
+               
+                 
+            
+            
             }
-        }while(opcion!=5);
+            
+        }while(opcion!=5);{
+        
+        
+    }
         
     }
     
